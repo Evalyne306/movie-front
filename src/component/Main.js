@@ -7,17 +7,17 @@ import Card from "./MovieCard.js";
 import axios from "axios";
 import MovieSearch from "./MovieSearch";
 import AddNewMovie from "./AddNewMovie.js";
-import EditMovie from "./EditMovie.js";
+// import EditMovie from "./EditMovie.js";
 
 
 function Main() {
   //const[selected, setSelected]=useState([])
-  const [movies, setBots] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [movieState, setMovieState] = useState([]);
    
   useEffect(() => {
     axios("http://localhost:9292/movies").then((res) => {
-      setBots(res.data);
+      setMovies(res.data);
 
       // setRobotName(res.data.id);
     });
@@ -39,7 +39,7 @@ function Main() {
       return movie.title.toLowerCase().includes(searchValue.toLowerCase()) 
     });
     if(Array.isArray(result)) {
-      setBots(result);
+      setMovies(result);
     }
   }
 
@@ -125,7 +125,7 @@ function Main() {
         );
         
       })}
-      <EditMovie/>
+      {/* <EditMovie/> */}
     </div>
 
   );
