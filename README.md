@@ -15,8 +15,8 @@ Movie Finder is a web application that allows users to add, view, search, update
 
 ## project Set-up
 ### Option 1 (live link)
-*If you want to see the app running in real-time directly, you can just click on this link:
-[https://movie-finder-project.vercel.app/]
+If you want to see the app running in real-time directly, you can just click on this link:
+[https://6405f5baf041a30fdf201f94--dazzling-cucurucho-6ecf15.netlify.app/]
 
 ### Option 2 (Cloning the repository)
 1. Open terminal and make a folder using 
@@ -24,9 +24,12 @@ mkdir <filename>
 2. Cd the folder 
 cd <filename>
 3. Create react app on the same folder
-npx create-react-app@latest ./
-Cloning the repository:
-press git clone https://github.com/Evalyne on your terminal
+    npx create-react-app@latest ./
+
+Cloning the repository on your terminal:
+
+     git clone git@github.com:Evalyne306/movie-front.git
+ 
 4. Open the directory 
 code .
 5. Make sure you `install npm` for the required dependancies to be added.
