@@ -1,5 +1,5 @@
 // // import React, { useState, useEffect } from "react";
-// // import axios from "axios";
+ import axios from "axios";
 
 // // const Login = () => {
 // //   const [username, setUsername] = useState("");
@@ -82,10 +82,23 @@ import React, { useState } from "react";
 function Login(props) {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(email);
-    }
+        try {
+          const response = await axios.post('/users', {
+            user: {
+              email: email,
+              password: pass,
+            },
+           
+          });
+          console.log(response)
+          // handle successful login
+        } catch (error) {
+          // handle errors
+        }
+       
+      };
 
     
     return (
@@ -97,7 +110,7 @@ function Login(props) {
                     <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@example.com" id="email" name="email" />
                     <label htmlFor="password">password</label>
                     <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="************" id="password" name="password" />
-                    <button className="login-btn" type="submit">Login</button>
+                    <button className="login-bton" type="submit">Login</button>
                 </form>
                 <button className="link-btn" onClick={() => props.onFormSwitch("sign up")}>Don't have an account? Sign up.</button>
             </div>

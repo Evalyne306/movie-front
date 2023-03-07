@@ -18,6 +18,9 @@ Movie Finder is a web application that allows users to add, view, search, update
 If you want to see the app running in real-time directly, you can just click on this link:
 [https://6405f5baf041a30fdf201f94--dazzling-cucurucho-6ecf15.netlify.app/]
 
+backend link 
+https://movie-finder-t7op.onrender.com
+
 ### Option 2 (Cloning the repository)
 1. Open terminal and make a folder using 
 mkdir <filename>

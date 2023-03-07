@@ -16,7 +16,7 @@ function Main() {
   const [movieState, setMovieState] = useState([]);
    
   useEffect(() => {
-    axios("http://localhost:9292/movies").then((res) => {
+    axios("https://movie-finder-t7op.onrender.com/movies").then((res) => {
       setMovies(res.data);
 
       // setRobotName(res.data.id);
@@ -63,7 +63,7 @@ function Main() {
   const deleteArrayItem = function (itemToBeRemoved) {
     console.log(itemToBeRemoved);
     axios
-      .delete(`http://localhost:9292/movie/destroy/${itemToBeRemoved.id}`)
+      .delete(`https://movie-finder-t7op.onrender.com/movie/destroy/${itemToBeRemoved.id}`)
       .then((response) => {
         console.log(response);
         const tempTransactions = [...movieState];

@@ -13,7 +13,7 @@ function AddNewMovie() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://localhost:9292/movies/create", {
+    fetch("https://movie-finder-t7op.onrender.com/movies/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
